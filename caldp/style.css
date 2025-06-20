@@ -28,7 +28,7 @@
 body {
   font-family: "Viga", sans-serif;
   font-weight: 500;
-  overflow: hidden;
+  overflow-y: auto;
 }
 h1{
   font-family: "Dela Gothic One", cursive;
@@ -113,10 +113,12 @@ padding-top:10px ;
   top: 20;
   height: auto;
   padding: 10px;
-  max-height: 100vh;
+  min-height: 100vh;
+  flex-direction: column;
   overflow-y: auto;
+  padding-bottom: 80px;
   width: auto;
-  display: grid;
+  display: flex;
   place-items: center;
 }
 
@@ -128,6 +130,17 @@ padding-top:10px ;
   border-radius: 10px;
   box-shadow: 0 0 30px #000;
   z-index: 90;
+  flex: 1;
+}
+
+.button-container {
+    position: relative;
+    bottom: 10;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 100;
+    margin-top: auto;
 }
 
 .theme-toggler {
@@ -244,12 +257,13 @@ button#equal {
 
 .back-button {
     position: absolute;
+    margin: 5px;
     width: 110px;
     min-height: 8%;
     bottom: 10px;
     right: 51%;
     transform: translateX(-10%);
-    z-index: 100;
+    z-index: 50;
     border-radius: 15px;
     color: white;
     background: linear-gradient(to right, #4b8cb8 0%, #705fac 100%);
@@ -267,19 +281,20 @@ button#equal {
     bottom: 10px;
     left: 49.5%;
     display: inline-block;
-    z-index: 100;
+    z-index: 50;
     border-radius: 100px;
 }
 
 .shop-button {
     position: absolute;
-    width: 9%;
+    margin: 5px;
+    width: 40%;
     max-height: max-content;
     opacity: 55%;
     bottom: 15px;
     left: 51%;
     transform: translateX(-10%);
-    z-index: 100;
+    z-index: 50;
     border-radius: 100px;
     border-style: dotted;
     font-size: 20px;
@@ -295,7 +310,7 @@ button#equal {
     top: 50px;
     right: 20px;
     width: 270px;
-    z-index: 100;
+    z-index: 200;
     background: white;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -304,16 +319,16 @@ button#equal {
 .price-list img {
     width: 100%;
     border-radius: 10px;
-    z-index: 100;
+    z-index: 200;
 }
 .toggle-button {
     font-family: "Stick";
     font-size: 25px;
     width: max-content ;
     position: absolute;
-    top: 10px;
+    top: 5px;
     right: 20px;
-    z-index: 10;
+    z-index: 200;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -396,6 +411,7 @@ button#equal {
 }
 
 .wrapper {
+  margin-bottom: 10px;
   color: #fff;
   font-size: 12px;
   display: inline-block;
@@ -443,6 +459,7 @@ button#equal {
 /* Disclaimer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 .disclaimer {
+  margin-top: 100px;
   position: absolute;
   display: inline-block;
   bottom: 0;
@@ -489,6 +506,7 @@ color: #ffffff80;
 /* About Text >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 .about {
+  margin-top: 100px;
   position: absolute;
   display: inline-block;
   color: #ffffff80;
