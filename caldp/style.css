@@ -112,6 +112,9 @@ padding-top:10px ;
 .container {
   top: 20;
   height: auto;
+  padding: 10px;
+  max-height: 100vh;
+  overflow-y: auto;
   width: auto;
   display: grid;
   place-items: center;
@@ -183,7 +186,7 @@ button {
   width: 55px;
   border: 0;
   border-radius: 30px;
-  margin: 4px;
+  margin: 10px 0;
   font-size: 22px;
   font-family: "Rubik", sans-serif;
   cursor: pointer;
