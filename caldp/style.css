@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Huninn&family=M+PLUS+1p:wght@400;800&family=Dela+Gothic+One&family=Stick&family=Koulen&family=Rubik:wght@300;400;500;700&family=Urbanist:wght@100;200;300;400;500;600&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Viga&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Huninn&family=M+PLUS+1p:wght@400;800&family=Dela+Gothic+One&family=Stick&family=Koulen&family=Rubik:wght@300;400;500;700&family=Urbanist:wght@100;200;300;400;500;600&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Viga&display=swap");
 
 /* Available Fonts >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   font-family: "Comfortaa", cursive;
@@ -43,6 +43,10 @@ h1{
    background-image: linear-gradient(#ffffff, #b8d8ff);
    background-clip: text;
    color: transparent;
+}
+h2{
+  font-family: "Comfortaa", cursive;
+  font-weight: 700;
 }
 h5{
   font-family: "Rubik", sans-serif;
@@ -103,8 +107,8 @@ padding-top:10px ;
 .bg {
   background-color: transparent;
   position: absolute;
-  height: 100vh;
-  width: 100vw;
+  height: 150vh;
+  width: 150vw;
   backdrop-filter: blur(90px);
   z-index: -1;
 }
@@ -113,7 +117,7 @@ padding-top:10px ;
   top: 20;
   height: auto;
   padding: 10px;
-  min-height: 100vh;
+  min-height: 85vh;
   flex-direction: column;
   overflow-y: auto;
   padding-bottom: 80px;
@@ -259,11 +263,11 @@ button#equal {
     position: absolute;
     margin: 5px;
     width: 110px;
-    min-height: 8%;
+    min-height: 10%;
     bottom: 10px;
     right: 51%;
     transform: translateX(-10%);
-    z-index: 50;
+    z-index: 60;
     border-radius: 15px;
     color: white;
     background: linear-gradient(to right, #4b8cb8 0%, #705fac 100%);
@@ -275,15 +279,21 @@ button#equal {
 
 .vertical-line {
   position: absolute;
-    width: 2px;
+    width: 1.5px;
     background-color: #ffffff;
     height: 75px;
-    bottom: 10px;
-    left: 49.5%;
+    bottom: 5px;
+    left: 49%;
     display: inline-block;
     z-index: 50;
     border-radius: 100px;
 }
+@media only screen and (max-width: 600px) {
+  .vertical-line {
+    left: 48%;
+  }
+}
+
 
 .shop-button {
     position: absolute;
@@ -292,7 +302,7 @@ button#equal {
     max-height: max-content;
     opacity: 55%;
     bottom: 15px;
-    left: 51%;
+    left: 37%;
     transform: translateX(-10%);
     z-index: 50;
     border-radius: 100px;
@@ -301,21 +311,33 @@ button#equal {
     background: none;
     -webkit-text-fill-color: #ffffffb0;
 }
+@media only screen and (max-width: 600px) {
+  .shop-button {
+    width: 40%;
+    left: 50%;
+  }
+}
 
 /* Price List Button (Right) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 .price-list {
     display: block;
-    position: fixed;
+    position: absolute;
     top: 50px;
     right: 20px;
-    width: 270px;
-    z-index: 200;
+    width: 300px;
+    z-index: 500;
     background: white;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
+@media only screen and (max-width: 600px) {
+  .price-list {
+    width: 80vw;
+  }
+}
+
 .price-list img {
     width: 100%;
     border-radius: 10px;
@@ -323,12 +345,13 @@ button#equal {
 }
 .toggle-button {
     font-family: "Stick";
-    font-size: 25px;
-    width: max-content ;
-    position: absolute;
+    font-size: 20px;
+    width: max-content;
+    position: fixed;
     top: 5px;
     right: 20px;
     z-index: 200;
+    border-radius: 20px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -459,18 +482,16 @@ button#equal {
 /* Disclaimer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 .disclaimer {
-  margin-top: 100px;
+  margin-bottom: 500%;
+  top: 140%;
   position: absolute;
   display: inline-block;
-  bottom: 0;
   left: 45px;
-  margin: 10px;
   text-align: center;
   font-family: "Comfortaa", cursive;
   font-size: 12px;
   letter-spacing: 0.5px;
   text-shadow: 5px 5px 20px #000;
-  text-decoration: none;
   cursor: pointer;
   z-index: 50;
 }
@@ -490,9 +511,9 @@ color: #ffffff80;
   display: block;
   border-radius: 2px;
   height: 2px;
-  top: 16px;
+  top: 15px;
   width: 0%;
-  left: 57px;
+  left: 500px;
   transition: all 0.5s ease;
 }
 
@@ -506,11 +527,11 @@ color: #ffffff80;
 /* About Text >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 .about {
-  margin-top: 100px;
+  margin-bottom: 10px;
+  top: 140%;
   position: absolute;
   display: inline-block;
   color: #ffffff80;
-  bottom: 0;
   right: 45px;
   margin: 10px;
   text-align: center;
@@ -558,8 +579,9 @@ color: #ffffff80;
   justify-content: center;
   font-family: "Urbanist", sans-serif;
   font-size: 85%;
-  width: 600px;
-  bottom: 60px;
+  width: 320px;
+  height: 450px;
+  bottom: -65%;
   right: 10px;
   padding: 20px;
   box-sizing: border-box;
@@ -579,7 +601,7 @@ color: #ffffff80;
   height: 25px;
   border-radius: 3px;
   background: #fff;
-  bottom: -11px;
+  bottom: 10px;
   right: 56px;
   transform: rotate(45deg);
   z-index: -1;
@@ -642,7 +664,7 @@ color: #ffffff80;
   text-transform: none;
   line-height: 25px;
   color: #6e7781;
-  left: 123px;
+  left: 143px;
   top: 18px;
   width: 32px;
   height: 32px;
@@ -690,6 +712,9 @@ color: #ffffff80;
   height: 18px;
   margin: -8px 140px -2px 109px;
   border-end-end-radius: 10px;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .line-2 {
@@ -698,13 +723,16 @@ color: #ffffff80;
   height: 17px;
   margin: 0px 149px 0 28px;
   border-start-start-radius: 10px;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .dev-info {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  flex-direction: row;
+  flex-direction: column;
   align-content: center;
   justify-content: center;
 }
@@ -741,7 +769,7 @@ color: #ffffff80;
   width: 100%;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   font-family: "Segoe UI", sans-serif;
   text-align: left;
   font-size: 17px;
@@ -755,14 +783,21 @@ color: #ffffff80;
   font-size: 14pt;
   font-weight: 300;
   text-shadow: 0 0 15px #fff;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
 }
+
+a{
+  color: #003aaf;
+}
+/* Colour of NokHei & Rudresh Modi's name; */
 
 .line-3 {
   content: "";
   position: absolute;
-  top: 105px;
+  top: 145px;
   width: 60px;
-  left: 87px;
   height: 3px;
   border-radius: 2px;
   background: linear-gradient(130deg,#185eed,#6b31b1 41.07%,#b50a7c 76.05%);
